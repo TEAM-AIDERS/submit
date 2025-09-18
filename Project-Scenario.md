@@ -1,15 +1,17 @@
-## Team18 AIDERS  
+
+## Team 18 AIDERS
+
 | 항목 | 내용 |
 |------|------|
-|프로젝트명| AI Agent 기반 개인 일정 자동 스케줄링 시스템 |
-|프로젝트 키워드| AI Agent, MCP, LangGraph, 일정 자동화, 자연어 스케줄링 |
-|트랙| 산학 트랙 |
-|프로젝트멤버| 함하경(2176414), 박시원(2276130), 강민서(2271006) |
-|팀지도교수| 오세은 교수님 |
-|무엇을 만들고자 하는가| 사용자가 자연어로 일정 요청을 입력하면, 멀티 에이전트 시스템이 해당 일정을 자동 분해하고, 문서 기반 분석(RAG), 우선순위 판단, 시간표 자동 배치 후 Google Calendar에 등록하는 AI 기반 루틴 추천 시스템을 개발하고자 합니다.|
-|고객| 시간 관리를 어려워하는 대학생 |
-|Pain Point| 다양한 일정(고정, 마감, 루틴)을 직접 정리하기 어렵고, 대부분의 앱이 사용자의 실제 상황을 반영하지 않습니다. 또한, 피드백 기반 루틴 최적화 시스템은 드뭅니다. |
-|사용할 소프트웨어 패키지의 명칭과 핵심기능/용도, 사용시나리오| LangGraph: 멀티에이전트 흐름 제어, Google Calendar API: 일정 등록 및 조회, Pinecone or PGVector: 벡터 검색 기반 문서 추천, OpenAI API: 자연어 파싱 및 설명 생성, Next.js: 사용자 UI 구성 |
-|사용할 소프트웨어 패키지의 명칭과 URL| LangGraph: https://github.com/langchain-ai/langgraph, OpenAI API: https://platform.openai.com/docs, Google Calendar API: https://developers.google.com/calendar/api, Pinecone: https://www.pinecone.io/, Next.js: https://nextjs.org/ |
-|팀그라운드룰| https://github.com/TEAM-AIDERS/submit-start/blob/main/GroundRule.md |
-|최종수정일| 2025-09-11 |
+| 프로젝트명 | 실시간 K-pop 이슈 감지 및 레이블 대응 지원을 위한 AI Agent 서비스 |
+| 프로젝트 키워드 | AI Agent, LangGraph, RAG, Kafka, MCP, K-pop, 트렌드 분석, 실시간 피드백 |
+| 트랙 | 산학 트랙 |
+| 프로젝트 멤버 | 함하경, 박시원, 강민서 |
+| 팀 지도교수 | 오세은 교수님 |
+| 무엇을 만들고자 하는가 | 본 프로젝트는 K-pop 레이블이 SNS 상의 팬 반응 및 이슈를 에이전트 기반으로 실시간 감지 및 분석하고, 즉각적인 대응 전략 수립에 참고할 수 있는 Multi-Agent 기반 AI 시스템을 구현하고자 합니다. 에이전트들은 일정 주기로 팬덤 내 트렌드를 수집하고 (Kafka 기반 파이프라인), 이슈의 원인 및 맥락을 분석한 뒤, 유사 사례 기반의 대응 전략을 추천합니다. 각 에이전트는 역할 기반으로 분산 처리되며, LangGraph를 통해 비동기적 흐름을 구성하고, RAG 기반 문서 검색 및 MCP 서버를 통한 DB 접근을 수행합니다. |
+| 고객 | **K-pop 소속사 A사의 홍보팀**<br>수많은 아티스트 팬덤의 피드백을 실시간으로 모니터링해야 하지만, 모든 커뮤니티를 수작업으로 분석하는 데 한계가 있음. 특히 해외 팬덤의 이슈, 밈, 팬 요청 등을 놓치는 경우가 많고, 커뮤니티 반응의 '변화 시점'을 빠르게 캐치하지 못해 대응 타이밍을 놓친 경험이 있음. 홍보 담당자는 요약된 이슈와 맥락, 팬덤 톤 변화 등을 시각적으로 받아보고 싶어함. |
+| Pain Point | K-pop 팬덤 이슈는 빠르게 형성되고 빠르게 사라지며, 텍스트 기반 밈/비판/요청 등이 소수 커뮤니티에서 번져 SNS 상 이슈로 커지는 경우가 많습니다. 그러나 현재 레이블은 이슈의 초기 발생, 전파 구조, 원인 등을 실시간으로 파악하기 어렵고, 유사한 대응 사례나 정책을 참고하기 위한 검색도 어렵습니다. |
+| **사용할 소프트웨어 패키지의 명칭과 핵심기능/용도, 사용시나리오** | - **Apache Kafka**: SNS 트렌드/이슈 스트리밍 수집 파이프라인 구성<br> - **LangGraph**: 에이전트 간 흐름 제어, 조건부 분기 및 병렬 처리<br> - **OpenAI API**: 감정 톤 분석, 원인 추론, 대응 요약 생성<br> - **Vector DB (Weaviate/Pinecone)**: 유사 사례 검색 및 피드백 기반 RAG 수행<br> - **Next.js**: 실시간 이슈 흐름 시각화 및 아티스트별 대시보드 구성 |
+| 사용할 소프트웨어 패키지의 명칭과 URL | - LangGraph: https://github.com/langchain-ai/langgraph <br> - OpenAI API: https://platform.openai.com/docs <br> - Kafka: https://kafka.apache.org/ <br> - Weaviate: https://weaviate.io/ <br> - Next.js: https://nextjs.org/ <br> |
+| 팀 그라운드룰 | https://github.com/TEAM-AIDERS/submit-start/blob/main/GroundRule.md|
+| 최종 수정일 | 2025-09-18 |
